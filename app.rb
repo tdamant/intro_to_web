@@ -17,7 +17,12 @@ get '/sample' do
   "sample"
 end
 
-get '/cat' do
-  @name_generator = ["Amigo", "Oscar", "Viking"].sample
+get '/named-cat' do
+  @name = params[:name]
+  erb :index
+end
+
+get '/random-cat' do
+  @name = ["Amigo", "Oscar", "Viking"].sample
   erb :index
 end
