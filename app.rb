@@ -18,5 +18,6 @@ get '/sample' do
 end
 
 get '/cat' do
-    erb :index
+  @name_generator = ["Amigo", "Oscar", "Viking"].sample
+  erb :index
 end
